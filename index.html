@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+  <html>
+  
+   <head>
+      <title>Coming Soon</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Skill Share Hub</title>
+      <style>
+
+        .ha img{
+          margin-top: 50px;
+          size-adjust: 5px;
+          transition: 0.4s ease-in-out;
+          color: rgb(14, 14, 17);
+        }
+            
+        .ha img:hover {
+        background: #03e9f4;
+        color: aqua;
+        box-shadow: 0 0 5px #03e9f4,
+          0 0 25px #03e9f4,
+          0 0 50px #03e9f4,
+          0 0 100px #03e9f4;
+        }
+
+        .fa img{
+          padding: 20px;
+          font-size: 30px;
+          width: 50px;
+          text-align: center;
+          text-decoration: none;
+          text-size-adjust: 30px;
+        }
+
+        /* Add a hover effect if you want */
+        .fa img:hover {
+          opacity: 0.7;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-color: #f1f1f1;
+        }
+              
+        h1 {
+          font-size: 60px;
+          margin-top: 50px;
+          color: #333;
+        }
+              
+        p {
+          font-size: 20px;
+          margin-top: 30px;
+            color: #666;
+          }
+              
+          .countdown {
+            font-size: 30px;
+          margin-top: 50px;
+            color: #666;
+            }
+      </style>
+
+      <script>
+          
+            var launchDate = new Date("2023-08-01T00:00:00").getTime();
+
+            var countdownInterval = setInterval(function() {
+
+              var now = new Date().getTime();
+
+              var timeRemaining = launchDate - now;
+
+              var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+              document.querySelector(".countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+              if (timeRemaining < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector(".countdown").innerHTML = "We're live!";
+              }
+            }, 1000);
+
+      </script>
+
+    </head>
+
+      <header>
+        <a href="https://www.facebook.com/SkillsShareHub/" class= "ha">
+          <img src="Images/SSH.png" alt="Skill Share Hub" >
+        </a>
+      </header>   
+
+      <body>
+        <h1>Coming Soon</h1>
+        <p>We're working on something awesome and can't wait to show you.</p>
+        <div class="countdown"></div>
+        <div class="socialIcons">
+          <a href="https://www.facebook.com/SkillsShareHub/" class= "fa">
+            <img src="Images/Skill Share Hub facebook.png" alt="Skill Share Hub facebook" >
+          </a>
+          <a href="https://www.instagram.com/skillssharehub/" class= "fa">
+            <img src="Images/Skill Share Hub instagram.png" alt="Skill Share Hub instagram" >
+          </a>
+          <a href="https://twitter.com/skillsharehub" class= "fa">
+            <img src="Images/Skill Share Hub twitter.png" alt="Skill Share Hub twitter" >
+          </a>
+          <a href="https://www.youtube.com/channel/UCH41lZiLOtCqixWCyWnPQAg" class= "fa">
+            <img src="Images/Skill Share Hub youtube.png" alt="Skill Share Hub youtube" >
+          </a>
+          <a href="https://chat.whatsapp.com/ExXxCIMYXiLEqVObEdoaTY" class= "fa">
+            <img src="Images/Skill Share Hub whatsapp.png" alt="Skill Share Hub whatsapp" >
+          </a>
+        </div>
+      </body>
+
+    </footer>
+        <p>© 2023 Skill Share Hub. All rights reserved.</p>
+    <footer>
+  </html>
